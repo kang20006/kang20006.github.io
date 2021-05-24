@@ -1085,7 +1085,7 @@ form .button-area button:hover{
 }
 @media (max-width: 780px) {
   canvas{
-    width:400px;
+    width:350px;
   }
 }
 
