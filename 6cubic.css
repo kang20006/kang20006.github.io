@@ -1,0 +1,1160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.about, .projects, .skills, .posts, .contact, footer{
+    font-family: 'Poppins', sans-serif;
+}
+.about .about-content,
+.projects .projects-content,
+.skills .skills-content,
+.contact .contact-content
+.posts .posts-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*section*/
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 10px 5px;
+    background:;
+}
+section .title::after{
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    width: 1000px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+/*scroolbar*/
+html{
+    scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/*canvas*/
+canvas{
+  position:relative;
+  border:0px solid;
+  margin-left:10% ;
+  width:700px;
+  display:block;
+  margin-top:0px;
+  background: transparent;
+  z-index: 99;
+}
+
+/*nav bar 6cube*/
+.scene1 {
+  width: 50px;
+  height: 50px;
+  margin: 0px auto;
+  perspective: 600px;
+}
+
+.cube1 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 15s linear infinite;
+}
+
+.cube1:hover{
+  animation-play-state: paused;
+}
+
+.cube__face1 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  opacity:0.9;
+  background-color: white;
+}
+
+.cube__face--front1  {
+  transform: rotateY(  0deg) translateZ(30px);
+  font-size: 10px;
+  color:white;
+  background: black;
+ }
+.cube__face--right1  {
+  transform: rotateY( 90deg) translateZ(30px);
+  font-size: 10px;
+  color:white;
+  background:grey;
+}
+.cube__face--back1   {
+  transform: rotateY(180deg) translateZ(30px);
+  font-size: 10px;
+  color:white;
+  background:black;
+}
+.cube__face--left1   {
+  transform: rotateY(-90deg) translateZ(30px);
+  font-size: 10px;
+  color:white;
+  background:grey;
+}
+.cube__face--top1    {
+  transform: rotateX( 90deg) translateZ(30px);
+  font-size: 10px;
+  color:white;
+  background:black;
+}
+.cube__face--bottom1 {
+  transform: rotateX(-90deg) translateZ(30px);
+  font-size: 10px;
+  color:white;
+  background:black;
+}
+
+@keyframes rotate {
+    0% { transform: rotateY(0);}
+    100% { transform: rotateY(360deg);}
+}
+
+/*nav bar setting*/
+.navbar{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 9999999;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar .logo{
+  border-radius: 6px;
+  border: 2px solid red;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+    padding:25px;
+}
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 15px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: crimson;
+}
+.navbar .menu li a:hover{
+    color: #fff;
+}
+
+/*homepage setting*/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: crimson;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+.home{
+    display: flex;
+    background: url("banner1.webp") no-repeat center;
+    height: 100%;
+    color: white;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+.home .image11{
+  width:250px;
+  height: 270px;
+  position: absolute;
+  border-radius: 50%;
+  border: 4px solid crimson;
+  left: 35%;
+  bottom:30%;
+}
+
+
+.home .max-width{
+  width: 100%;
+  display: flex;
+}
+.home .max-width .row{
+  margin-right: 0;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+    position:absolute; bottom:70%; left:14%;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+    position:absolute; bottom:60%; left:14%;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+    position:absolute; bottom:56%; left:14%;
+}
+
+.home .home-content #home11  {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+    position:absolute; bottom:50%; left:14%;
+    z-index: 9999;
+}
+.home .home-content #home11:hover{
+    color: crimson;
+    background: none;
+}
+
+/*big cubic*/
+.menu1{
+  display: block;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 25px;
+  transition: color 0.3s ease;
+}
+
+.menu1:hover{
+  color: crimson;
+}
+
+.scene {
+  position:relative; left:100px; bottom:150px;
+  width: 200px;
+  height: 200px;
+  /*margin: 200px auto;*/
+  perspective: 600px;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 15s linear infinite;
+  animation-play-state: running;
+}
+
+.cube:hover{
+  animation-play-state: paused;
+}
+
+.cube__face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity:0.7;
+  background-color: white;
+}
+
+.cube__face--front  {
+  transform: rotateY(  0deg) translateZ(50px);
+  font-size: 1.5em;
+  color:white;
+  background: #800000;
+ }
+.cube__face--right  {
+  transform: rotateY( 90deg) translateZ(50px);
+  font-size: 1.5em;
+  color:white;
+  background:#800000;
+}
+.cube__face--back   {
+  transform: rotateY(180deg) translateZ(50px);
+  font-size: 1.5em;
+  color:white;
+  background:#800000;
+}
+.cube__face--left   {
+  transform: rotateY(-90deg) translateZ(50px);
+  font-size: 1.5em;
+  color:white;
+  background:#800000;
+}
+.cube__face--top    {
+  transform: rotateX( 90deg) translateZ(50px);
+  font-size: 1.5em;
+  color:white;
+  background:#800000;
+}
+.cube__face--bottom {
+  transform: rotateX(-90deg) translateZ(50px);
+  font-size: 1.5em;
+  color:white;
+  background:#800000;
+}
+
+@keyframes rotate {
+    0% { transform: rotateY(0);}
+    100% { transform: rotateY(360deg);}
+}
+
+.shadow {
+    width:150px;
+    height:150px;
+    background: black;
+    box-shadow: 0 0 50px 50px black;
+    -webkit-transform: rotateX(90deg) translateZ(-250px) rotateY(180deg) translateX(0px);
+}
+
+
+#a1{
+  position:relative;
+  transform-style: preserve-3d;
+}
+
+#a2{
+  position:relative;
+  top:100px;
+  transform-style: preserve-3d;
+}
+
+#a3{
+  position:relative;
+  left:100px;
+  transform-style: preserve-3d;
+}
+
+#a4{
+  position:relative;
+  left:100px;top:100px;
+  transform-style: preserve-3d;
+}
+
+#a5{
+  position:relative;
+  left:100px;
+  transform: translateZ(-100px);
+  transform-style: preserve-3d;
+}
+
+#a6{
+  position:relative;
+  top:100px;
+  transform: translateZ(-100px);
+  transform-style: preserve-3d;
+}
+
+#a7{
+  position:relative;
+  left:100px;top:100px;
+  transform: translateZ(-100px);
+  transform-style: preserve-3d;
+}
+
+#a8{
+  position:relative;
+  transform: translateZ(-100px);
+  transform-style: preserve-3d;
+}
+
+#a1:hover{
+  transform: translateX(var(--translate, -100px));
+}
+
+#a2:hover{
+  transform: translateX(var(--translate, -100px));
+}
+
+#a3:hover{
+  transform: translateX(var(--translate, 100px));
+}
+
+#a4:hover{
+  transform: translateX(var(--translate, 100px));
+}
+
+#a5:hover{
+  transform: translateZ(var(--translate, -200px)) ;
+}
+#a6:hover{
+  transform: translateZ(var(--translate, -200px)) ;
+}
+#a7:hover{
+  transform: translateZ(var(--translate, -200px)) ;
+}
+#a8:hover{
+  transform: translateZ(var(--translate, -200px)) ;
+}
+
+footer{
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: crimson;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+#icon1{
+    color: white;
+}
+footer .icon:hover{
+    background-color: #666;
+    cursor: pointer;
+}
+
+/* about section styling */
+.max-width{
+    max-width: 930px;
+}
+/* about section styling */
+.about{
+  background: url("banner2.webp") no-repeat center;
+  background-size: cover;
+}
+
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: crimson;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+
+
+/*skills*/
+.skills,
+.skills:before,
+.skills:after{
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+  outline: 1px solid transparent;
+}
+
+.skills{
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: url("banner1.webp") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #f5f5f5;
+  font-family: 'Ubuntu',sans-serif;
+  font-weight: 300;
+  animation: fadeIn .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1;
+}
+.skills .title::after{
+  background-color: white;
+}
+
+.wrapper{
+  width: 230px;
+  height: 480px;
+  perspective: 800px;
+  position: relative;
+}
+
+.card{
+  width: 250px;
+  height: 450px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-150px);
+  transition: transform 350ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+  cursor: pointer;
+}
+
+.card > div{
+  position: absolute;
+  width: 250px;
+  height: 450px;
+  padding: 34px 21px;
+  transition: all 350ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+}
+
+.front1{
+  background-image: linear-gradient(180deg, rgba(145,141,144,1) 0%, rgba(92,91,94,0) 100%);
+  transform: rotateY(0deg) translateZ(160px);
+  border-radius: 34px 3px 0 0;
+}
+
+.right1{
+  background-image: linear-gradient(0deg, rgba(145,141,144,1) 0%, rgba(92,91,94,0) 100%);
+  opacity: 0.08;
+  transform: rotateY(90deg) translateZ(160px);
+  border-radius: 0 0 3px 34px;
+}
+
+.card:hover{
+  transform: translateZ(-160px) rotateY( -90deg);
+}
+
+.card:hover .front1{
+  opacity: 0;
+}
+
+.card:hover .right1{
+  opacity: 1;
+}
+
+.skills > h1,h2{
+  margin: 0;
+  font-size: 38px;
+  letter-spacing: -.25px;
+  transform: translateX(-44px);
+  font-family: 'Poppins';
+  font-weight: 700;
+}
+
+.skills > h2{
+  font-size: 21px;
+  transform: translateX(-34px);
+}
+
+.skills > p{
+  margin: 0;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.skils > span{
+  margin-left: 13px;
+  opacity: .55;
+}
+
+.skills > i{
+  transform-origin: top right;
+  transition: transform 300ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+  transition-delay: 100ms;
+  transform: translateX(21%) rotateZ(13deg) skewX(3deg);
+  pointer-events: none;
+}
+
+.img-wrapper{
+  animation: float 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate;
+  position: absolute;
+  top: 150px; right: 0;
+  pointer-events: none;
+  backface-visibility: hidden;
+}
+
+@keyframes float{
+  0%{
+    transform: translateZ(20px);
+  }
+  100%{
+    transform: translateY(-21px) translateX(-13px) translateZ(30px);
+  }
+}
+
+.card:hover ~ .img-wrapper i{
+  transform: scale(0.9) translateX(77%) translateY(90%) rotateZ(0deg);
+}
+
+.skills>ul{
+  margin-left: 21px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 300;
+  list-style: none;
+}
+
+.skills>li{
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.skills>li:before{
+  content: 'x';
+  position: absolute;
+  left: -21px;
+  opacity: .55;
+}
+
+.skills>button{
+  position: absolute;
+  right: 21px;
+  bottom: 34px;
+  border: none;
+  box-shadow: none;
+  background: none;
+  color: inherit;
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: -.25px;
+  font-weight: 700;
+  padding: 13px 34px;
+  border-radius: 55px 55px 21px 55px;
+  background-image: linear-gradient(130deg, rgba(117,51,165,1)  50%, rgba(51,46,57,.89) 100%);
+  background-size: 125% 100%;
+  background-position: right;
+  cursor: pointer;
+  box-shadow: 8px 5px 13px rgba(34,34,34,.08);
+  transform: scale(0) skewY(13deg);
+  transition: all 150ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+  transform-origin: right bottom;
+}
+
+.card:hover .skills> button{
+   transform: scale(1) skewY(0);
+}
+
+.card:not(:hover) .skills> button{
+opacity: 0;
+}
+
+.skills> button:hover{
+  background-position: left;
+}
+
+.level{
+  position: absolute;
+  bottom: 34px;
+  left: 21px;
+  font-size: 34px;
+  opacity: .34;
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0.33;
+    transform: scale(.89);
+  }
+}
+
+.skills .skills-content .type1{
+  width: 100vw;
+  padding: 10px;
+}
+.skills .skills-content .type1 .text{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.skills .skills-content .type1 .text p{
+    text-align: justify;
+}
+.skills .skills-content .type1 a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.skills .skills-content .type1 a:hover{
+    color: crimson;
+    background: none;
+}
+
+/*projects*/
+.projects{
+  box-sizing: border-box;
+  background: url("banner2.webp") no-repeat center;
+  background-size: cover;
+}
+
+.projects .projects-content{
+  background-color: white;
+  padding: 20px;
+  font-family: Ubuntu;
+}
+
+/* Center website */
+.projects .max-width{
+  max-width: 1000px;
+  margin: auto;
+}
+
+.projects .row1 {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.projects .row1,
+.projects .row1 > .column1 {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.projects .column1 {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.projects .row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.projects .content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.projects .show {
+  display: block;
+}
+
+/* Style the buttons */
+.projects .btn {
+  border-radius: 5px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: crimson;
+  cursor: pointer;
+  color: white;
+}
+
+/* Add a grey background color on mouse-over */
+.projects .btn:hover {
+  background: none;
+  color:black;
+}
+
+/* Add a dark background color to the active button */
+.projects .btn.active {
+  background-color: #666;
+  color: white;
+}
+
+/*posts*/
+.posts {
+  box-sizing: border-box;
+  background: url("banner1.webp") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.posts .title{
+  color:white;
+}
+
+.posts .title::after{
+  background-color:white;
+}
+
+.posts .posts-content {
+  background: none;
+  font-family: Ubuntu, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.posts .timeline {
+  position: relative;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.posts .timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.posts .container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.posts .container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.posts .left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.posts .right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.posts .left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.posts .right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.posts .right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.posts .content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+.posts .content h2{
+  margin-left: 10px;
+}
+
+
+/*contact*/
+.contact{
+  background: url("banner2.webp") no-repeat center;
+  background-size: cover;
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact form .fields{
+    display: flex;
+}
+.contact form .field,
+.contact form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact form .name{
+    margin-right: 10px;
+}
+.contact form .field input,
+.contact form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+.contact form .field input:focus,
+.contact form .textarea textarea:focus{
+    border-color: #b3b3b3;
+}
+.contact form .textarea textarea{
+  padding-top: 10px;
+  resize: none;
+}
+.contact form .button-area{
+  display: flex;
+  align-items: center;
+}
+form .button-area button{
+  color: #fff;
+  display: block;
+  width: 160px!important;
+  height: 45px;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-wrap: nowrap;
+  background: crimson;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+form .button-area button:hover{
+  color: crimson;
+  background: none;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+/* responsive media query start */
+@media (max-width:){}
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        height: 150px;
+        width: 150px;
+    }
+    .scene{
+      display:none;
+    }
+    section .title::after{
+        width: 400px;
+        height: 3px;
+        background: #111;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .navbar{
+        display:none;
+    }
+    .home .image11{
+      width:150px;
+      height:170px;
+    }
+
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 930px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .skills .skills-content,
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+@media (max-width: 780px) {
+  canvas{
+    width:400px;
+  }
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 40px;
+    }
+    .home .home-content .text-3{
+        font-size: 15px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .services .serv-content .card{
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2{
+        font-size: 40px;
+    }
+    .home .home-content .text-3{
+        font-size: 15px;
+    }
+    .about .about-content .right .text,
+    .skills .skills-content .text{
+        font-size: 19px;
+    }
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
